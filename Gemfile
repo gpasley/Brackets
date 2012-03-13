@@ -21,6 +21,13 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
+group :production do
+  gem "pg", "0.13.2" 
+
+end
+
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
