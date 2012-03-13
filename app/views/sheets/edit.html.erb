@@ -1,0 +1,123 @@
+<%= form_for @sheet do |f| %>
+<%= render "shared/error_messages", :target => @sheet %>
+
+    <div class=""><%= f.text_field :name, :placeholder => 'Bracket Name...' %> for <%= current_user.fullname %> 	
+</div>
+  
+  
+<table summary="Tournament Bracket" class="mm">
+ <tr>
+  	<td class="mm"><p class="mm"><%= f.collection_select :round1g1a, Team.where("game = '1A'").order(:name), :name, :display_name, :include_blank => '' %></p></td>
+	  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g1a, options_for_select(choice_r1g1a + choice_r1g2a), :include_blank => '' %></p></td>
+
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g1a, options_for_select(choice_r1g1a + choice_r1g2a + choice_r1g3a + choice_r1g4a), :include_blank => '' %></p></td>
+
+  <td rowspan="8" class="mm"><p class="mm"><%= f.select :round4g1, options_for_select(choice_r1g1a + choice_r1g2a + choice_r1g3a + choice_r1g4a + choice_r1g5a + choice_r1g6a + choice_r1g7a + choice_r1g8a), :include_blank => '' %></p></td>
+
+  <td rowspan="16" class="mm"><p class="mm"><%= f.select :round5g1, options_for_select(choice_r1g1a + choice_r1g2a + choice_r1g3a + choice_r1g4a + choice_r1g5a + choice_r1g6a + choice_r1g7a + choice_r1g8a + choice_r1g9a + choice_r1g10a + choice_r1g11a + choice_r1g12a + choice_r1g13a + choice_r1g14a + choice_r1g15a + choice_r1g16a), :include_blank => '' %></p></td> 
+
+  <td rowspan="8" class="mm"><p class="mm"><%= f.select :round6, options_for_select(choice_r1g1a + choice_r1g2a + choice_r1g3a + choice_r1g4a + choice_r1g5a + choice_r1g6a + choice_r1g7a + choice_r1g8a + choice_r1g9a + choice_r1g10a + choice_r1g11a + choice_r1g12a + choice_r1g13a + choice_r1g14a + choice_r1g15a + choice_r1g16a + choice_r1g1b + choice_r1g2b + choice_r1g3b + choice_r1g4b + choice_r1g5b + choice_r1g6b + choice_r1g7b + choice_r1g8b + choice_r1g9b + choice_r1g10b + choice_r1g11b + choice_r1g12b + choice_r1g13b + choice_r1g14b + choice_r1g15b + choice_r1g16b), :include_blank => '' %></p></td>
+
+  <td rowspan="16" class="mm"><p class="mm"><%= f.select :round5g2, options_for_select(choice_r1g1b + choice_r1g2b + choice_r1g3b + choice_r1g4b + choice_r1g5b + choice_r1g6b + choice_r1g7b + choice_r1g8b + choice_r1g9b + choice_r1g10b + choice_r1g11b + choice_r1g12b + choice_r1g13b + choice_r1g14b + choice_r1g15b + choice_r1g16b), :include_blank => '' %></p></td>
+
+  <td rowspan="8" class="mm"><p class="mm"><%= f.select :round4g3, options_for_select(choice_r1g1b + choice_r1g2b + choice_r1g3b + choice_r1g4b + choice_r1g5b + choice_r1g6b + choice_r1g7b + choice_r1g8b), :include_blank => '' %></p></td>
+
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g1b, options_for_select(choice_r1g1b + choice_r1g2b + choice_r1g3b + choice_r1g4b), :include_blank => '' %></p></td>
+
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g1b, options_for_select(choice_r1g1b + choice_r1g2b), :include_blank => '' %></p></td>
+
+  <td class="mm"><p class="mm"><%= f.select :round1g1b, options_for_select(choice_r1g1b), :include_blank => '' %></p></td>
+ </tr>
+ <tr>
+  <td class="mm"><p class="mm"><%= f.collection_select :round1g2a, Team.where("game = '2A'").order(:name), :name, :display_name, :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g2b, options_for_select(choice_r1g2b), :include_blank => '' %></p></td>
+ </tr>
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g3a, options_for_select(choice_r1g3a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g2a, options_for_select(choice_r1g3a + choice_r1g4a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g2b, options_for_select(choice_r1g3b + choice_r1g4b), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g3b, options_for_select(choice_r1g3b), :include_blank => '' %></p></td>
+ </tr>
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g4a, options_for_select(choice_r1g4a), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g4b, options_for_select(choice_r1g4b), :include_blank => '' %></p></td>
+ </tr>
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g5a, options_for_select(choice_r1g5a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g3a, options_for_select(choice_r1g5a + choice_r1g6a), :include_blank => '' %></p></td>
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g2a, options_for_select(choice_r1g5a + choice_r1g6a + choice_r1g7a + choice_r1g8a), :include_blank => '' %></p></td>
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g2b, options_for_select(choice_r1g5b + choice_r1g6b + choice_r1g7b + choice_r1g8b), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g3b, options_for_select(choice_r1g5b + choice_r1g6b), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g5b, options_for_select(choice_r1g5b), :include_blank => '' %></p></td>
+ </tr>
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g6a, options_for_select(choice_r1g6a), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g6b, options_for_select(choice_r1g6b), :include_blank => '' %></p></td>
+ </tr>
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g7a, options_for_select(choice_r1g7a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g4a, options_for_select(choice_r1g7a + choice_r1g8a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g4b, options_for_select(choice_r1g7b + choice_r1g8b), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g7b, options_for_select(choice_r1g7b), :include_blank => '' %></p></td>
+ </tr>
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g8a, options_for_select(choice_r1g8a), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g8b, options_for_select(choice_r1g8b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g9a, options_for_select(choice_r1g9a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g5a, options_for_select(choice_r1g9a + choice_r1g10a), :include_blank => '' %></p></td>
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g3a, options_for_select(choice_r1g9a + choice_r1g10a + choice_r1g11a + choice_r1g12a), :include_blank => '' %></p></td>
+  <td rowspan="8" class="mm"><p class="mm"><%= f.select :round4g2, options_for_select(choice_r1g9a + choice_r1g10a + choice_r1g11a + choice_r1g12a + choice_r1g13a + choice_r1g14a + choice_r1g15a + choice_r1g16a), :include_blank => '' %></p></td>
+  <td rowspan="32" align="center"><p class="mm"><%= f.submit "Update Bracket", :class => "btn-success" %></p></td>
+  <td rowspan="8" class="mm"><p class="mm"><%= f.select :round4g4, options_for_select(choice_r1g9b + choice_r1g10b + choice_r1g11b + choice_r1g12b + choice_r1g13b + choice_r1g14b + choice_r1g15b + choice_r1g16b), :include_blank => '' %></p></td>
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g3b, options_for_select(choice_r1g9b + choice_r1g10b + choice_r1g11b + choice_r1g12b), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g5b, options_for_select(choice_r1g9b + choice_r1g10b), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g9b, options_for_select(choice_r1g9b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g10a, options_for_select(choice_r1g10a), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g10b, options_for_select(choice_r1g10b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g11a, options_for_select(choice_r1g11a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g6a, options_for_select(choice_r1g11a + choice_r1g12a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g6b, options_for_select(choice_r1g11b + choice_r1g12b), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g11b, options_for_select(choice_r1g11b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g12a, options_for_select(choice_r1g12a), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g12b, options_for_select(choice_r1g12b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g13a, options_for_select(choice_r1g13a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g7a, options_for_select(choice_r1g13a + choice_r1g14a), :include_blank => '' %></p></td>
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g4a, options_for_select(choice_r1g13a + choice_r1g14a + choice_r1g15a + choice_r1g16a), :include_blank => '' %></p></td>
+  <td rowspan="4" class="mm"><p class="mm"><%= f.select :round3g4b, options_for_select(choice_r1g13b + choice_r1g14b + choice_r1g15b + choice_r1g16b), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g7b, options_for_select(choice_r1g13b + choice_r1g14b), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g13b, options_for_select(choice_r1g13b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g14a, options_for_select(choice_r1g14a), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g14b, options_for_select(choice_r1g14b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g15a, options_for_select(choice_r1g15a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g8a, options_for_select(choice_r1g15a + choice_r1g16a), :include_blank => '' %></p></td>
+  <td rowspan="2" class="mm"><p class="mm"><%= f.select :round2g8b, options_for_select(choice_r1g15b + choice_r1g16b), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g15b, options_for_select(choice_r1g15b), :include_blank => '' %></p></td>
+ </tr>
+
+ <tr>
+  <td class="mm"><p class="mm"><%= f.select :round1g16a, options_for_select(choice_r1g16a), :include_blank => '' %></p></td>
+  <td class="mm"><p class="mm"><%= f.select :round1g16b, options_for_select(choice_r1g16b), :include_blank => '' %></p></td>
+ </tr>
+</table>
+<% end %>

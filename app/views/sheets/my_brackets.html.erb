@@ -1,0 +1,7 @@
+<div class="container">
+<br><br><br>
+<% @sheets.each do |sheet| %>
+
+<%= link_to sheet.name, sheet %> <%= link_to 'Edit', edit_sheet_path(sheet) %><br>
+<% end %>
+</div>

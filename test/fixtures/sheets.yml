@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  name: MyString
+  round1g1a: MyString
+  round2g1a: MyString
+  round3g1a: MyString
+  round4g1: MyString
+  round4g2: MyString
+  round4g3: MyString
+  round4g4: MyString
+  round5g1: MyString
+  round5g2: MyString
+  round6: MyString
+  round1pts: 1
+  round2pts: 1
+  round3pts: 1
+  round4pts: 1
+  round5pts: 1
+  round6pts: 1
+  total_points: 1
+  is_paid: false
+
+two:
+  user_id: 1
+  name: MyString
+  round1g1a: MyString
+  round2g1a: MyString
+  round3g1a: MyString
+  round4g1: MyString
+  round4g2: MyString
+  round4g3: MyString
+  round4g4: MyString
+  round5g1: MyString
+  round5g2: MyString
+  round6: MyString
+  round1pts: 1
+  round2pts: 1
+  round3pts: 1
+  round4pts: 1
+  round5pts: 1
+  round6pts: 1
+  total_points: 1
+  is_paid: false

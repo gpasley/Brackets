@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brackets</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+		<div id="header-main">
+		  <%= render :partial => 'layouts/header'%>
+
+	    </div>
+	<div id="zuma-main">
+		<% flash.each do |name, msg| %>
+	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	      <% end %>
+<%= yield %>
+     </div>
+
+</body>
+</html>

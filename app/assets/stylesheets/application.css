@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+table.mm {
+  border-collapse: collapse;
+  border: none;
+  font: small arial, helvetica, sans-serif;
+}
+td.mm {
+  vertical-align: middle;
+  width: 10em;
+  margin: 0;
+  padding: 0;
+}
+td.mm p.mm {
+  border-bottom: solid 1px black;
+  margin: 0;
+  padding: 5px 5px 2px 5px;
+}
+
+body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+   padding-top:65px;   /* Height of the header */
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  color: #ffffff;
+  padding: 1em;
+  text-align: center;
+}
+
+#flash_notice {
+  color: #57a957;
+  
+}
+
+#flash_error {
+  color: #c43c35;
+}
+
+#flash_alert {
+  color: #339bb9;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+
+/*-------------------------------------------------*/
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
