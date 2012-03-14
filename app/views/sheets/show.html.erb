@@ -69,7 +69,7 @@
   <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g5a %></p></td>
   <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g3a %></p></td>
   <td rowspan="8" class="mm"><p class="mm"><%= @sheet.round4g2 %></p></td>
-  <td rowspan="32" align="center"><p class="mm"></p></td>
+  <td rowspan="32" align="center"><%= link_to "Edit Bracket", edit_sheet_path(@sheet), :class => "btn btn-success" %><p class="mm"></p></td>
   <td rowspan="8" class="mm"><p class="mm"><%= @sheet.round4g4 %></p></td>
   <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g3b %></p></td>
   <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g5b %></p></td>

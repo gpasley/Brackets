@@ -1,0 +1,13 @@
+
+<div class="container">
+Welcome to March Madness Brackets<br><br>
+
+<%= link_to 'Create Bracket', new_sheet_path, :class => "btn success" %>
+<br><br>
+<% if user_signed_in? %>
+   
+	<% if current_user.is_admin? %>
+<%= link_to 'Calculate', points_path, :class => "btn btn-success" %>
+<% end %>
+<% end %>
+<div>
