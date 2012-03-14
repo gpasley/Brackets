@@ -1,10 +1,12 @@
 <h1>Listing teams</h1>
-
-<table>
+<br>
+<%= link_to 'New Team', new_team_path %>
+<br><br>
+<table width="50%">
   <tr>
-    <th>Name</th>
-    <th>Display name</th>
-    <th>Url</th>
+    <th align="left">Name</th>
+    <th align="left">Display name</th>
+    <th align="left">Game</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,7 +16,7 @@
   <tr>
     <td><%= team.name %></td>
     <td><%= team.display_name %></td>
-    <td><%= team.url %></td>
+    <td><%= team.game %></td>
     <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, confirm: 'Are you sure?', method: :delete %></td>

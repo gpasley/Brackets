@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120312221219) do
+ActiveRecord::Schema.define(:version => 20120313201822) do
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(:version => 20120312221219) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "last_edit_by", :default => 0
+    t.boolean  "is_master",    :default => false
   end
 
   create_table "teams", :force => true do |t|

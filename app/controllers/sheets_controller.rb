@@ -1,6 +1,6 @@
 class SheetsController < ApplicationController
   def index
-    @teams = Team.all
+    @sheets = Sheet.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +14,15 @@ class SheetsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sheets }
+    end
+  end
+  
+  def get_points
+    @master = Sheet.where("is_master = ?", true).first
+    @sheets = Sheet.where("is_master = ?", false)
+   # @sheets = Sheet.all
+    respond_to do |format|
+      format.html # index.html.erb
     end
   end
   
