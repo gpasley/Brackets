@@ -1,8 +1,11 @@
 
 <div class="container">
-Welcome to March Madness Brackets<br><br>
+	<div align="center" class="mytitle">
+Welcome to March Madness Brackets
+</div>
+<br><br>
 
-<%= link_to 'Create Bracket', new_sheet_path, :class => "btn success" %>
+<%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %>
 <br><br>
 <% if user_signed_in? %>
    

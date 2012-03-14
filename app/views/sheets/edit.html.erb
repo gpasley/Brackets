@@ -94,7 +94,7 @@
 
   <td rowspan="8" class="mm"><p class="mm"><%= f.collection_select :round4g2, Team.where("game = '9A' or game = '10A' or game = '11A' or game = '12A' or game = '13A' or game = '14A' or game = '15A' or game = '16A'").order(:name), :name, :display_name, :include_blank => '' %></p></td>
 
-  <td rowspan="32" align="center"><p class="mm"><%= f.submit "Add Bracket", :class => "btn-success" %></p></td>
+  <td rowspan="32" align="center"><p class="mm"><%= f.submit "Update Bracket", :class => "btn-success" %></p></td>
 
   <td rowspan="8" class="mm"><p class="mm"><%= f.collection_select :round4g4, Team.where("game = '9B' or game = '10B' or game = '11B' or game = '12B' or game = '13B' or game = '14B' or game = '15B' or game = '16B'").order(:name), :name, :display_name, :include_blank => '' %></p></td>
 
