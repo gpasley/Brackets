@@ -22,6 +22,8 @@ td.mm p.mm {
   padding: 5px 5px 2px 5px;
 }
 
+.my-select { font-size: 16px; }
+
 body {
    padding:10px;
    padding-bottom:60px;   /* Height of the footer */
