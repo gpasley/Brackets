@@ -1,16 +1,43 @@
 
 <div class="container">
-	<div align="center" class="mytitle">
-Welcome to March Madness Brackets
-</div>
-<br><br>
+	<div class="hero-unit">
+	        <div class="mytitle">March Madness Brackets <%= Time.now.strftime("%Y") %></div>
+	      </div>
+<br>
 
 <%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %>
 <br><br>
 <% if user_signed_in? %>
    
 	<% if current_user.is_admin? %>
-<%= link_to 'Calculate', points_path, :class => "btn btn-success" %>
+<%= link_to 'Calculate', points_path, :class => "btn btn-success" %><br><br>
 <% end %>
 <% end %>
+
+<div class="row">
+        <div class="span3">
+          <h2>Scoring</h2>
+           <p>Round 1 - 1pt </p>
+		   <p>Round 2 - 2pts </p>
+		   <p>Round 3 - 4pts </p>
+		   <p>Round 4 - 8pts </p>
+		   <p>Round 5 - 16pts </p>
+		   <p>Round 6 - 32pts </p>
+		   <p>*Points per win</p>
+          
+        </div>
+        <div class="span4">
+          <h2>Champion Pick</h2>
+		  <table width="50%">
+           <% @picks.each do |pick| %>
+           <tr><td><%= pick[0] %></td><td align="right"><%= pick[1] %></td></tr>
+		   <% end %>
+		  </table>
+       </div>
+        <div class="span5">
+          <h2>Leaders <a class="btn" href="#">View All</a></h2>
+          <p></p>
+
+        </div>
+      </div>
 <div>
