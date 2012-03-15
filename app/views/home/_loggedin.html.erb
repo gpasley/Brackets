@@ -5,13 +5,13 @@
 	      </div>
 <br>
 
-<%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %>
+
 <br><br>
 <% if user_signed_in? %>
-   
+   <%= link_to 'View Master Sheet', sheet_path(@sheet), :class => "btn btn-info" %><br><br>
 	<% if current_user.is_admin? %>
-	<%= link_to 'Master', sheet_path(@sheet), :class => "btn btn-info" %>
-<%= link_to 'Calculate', points_path, :class => "btn btn-success" %> <%= link_to 'Lock', lock_sheets_path, :class => "btn btn-danger" %><br><br>
+	
+<%= link_to 'Calculate', points_path, :class => "btn btn-success" %> <%= link_to 'Lock', lock_sheets_path, :class => "btn btn-danger" %><br><br><%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %><br>
 <% end %>
 <% end %>
 
