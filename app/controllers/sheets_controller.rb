@@ -28,6 +28,10 @@ class SheetsController < ApplicationController
     end
   end
   
+  def leaders
+    @sheets = Sheet.where("is_master = ?", false).order("total_points desc")
+  end
+  
   def new
     @sheet = Sheet.new
 

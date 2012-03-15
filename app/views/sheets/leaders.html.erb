@@ -1,0 +1,31 @@
+<div class="">
+  <table id="leaders">
+	<th>Name</th>
+	<th>Bracket</th>
+	<th>Final Four Teams</th>
+	<th>Champion Pick</th>
+	<th>Rd 1</th>
+	<th>Rd 2</th>
+	<th>Sweet 16</th>
+	<th>Elite 8</th>
+	<th>Final 4</th>
+	<th>Final</th>
+	<th>Total</th>
+	<% @sheets.each_with_index do |sheet, i| %>
+	<% row_class = i%2 == 0 ? "even" : "odd" %>
+	<tr class="<%= row_class %>">
+	  <td><%= sheet.user.fullname %></td>
+	  <td><%= sheet.name %></td>
+	  <td><%= sheet.round4g1 %>, <%= sheet.round4g2 %>, <%= sheet.round4g3 %>, <%= sheet.round4g4 %></td>
+	  <td><%= sheet.round6 %></td>
+	  <td><%= sheet.round1pts %></td>
+	  <td><%= sheet.round2pts %></td>
+	  <td><%= sheet.round3pts %></td>
+	  <td><%= sheet.round4pts %></td>
+	  <td><%= sheet.round5pts %></td>
+	  <td><%= sheet.round6pts %></td>
+	  <td><%= sheet.total_points %></td>
+	</tr>
+	<% end %>
+  </table>
+</div>

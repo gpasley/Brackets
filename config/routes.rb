@@ -7,6 +7,7 @@ Brackets::Application.routes.draw do
   devise_for :users
   match 'sheets/my_brackets' => 'sheets#my_brackets', :as => :my_brackets
   match 'sheets/get_points' => 'sheets#get_points', :as => :points
+  match 'sheets/leaders' => 'sheets#leaders', :as => :leaders
   resources :sheets 
 
   

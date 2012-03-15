@@ -36,8 +36,12 @@
 		  </table>
        </div>
         <div class="span5">
-          <h2>Leaders <a class="btn" href="#">View All</a></h2>
-          <p></p>
+          <h2>Leaders <%= link_to 'View All', leaders_path, :class => 'btn' %></h2>
+          <table width="50%">
+           <% @leaders.each do |leader| %>
+           <tr><td><%= leader.name %></td><td align="right"><%= leader.total_points %></td></tr>
+		   <% end %>
+		  </table>
 
         </div>
       </div>
