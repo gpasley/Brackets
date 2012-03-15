@@ -1,7 +1,7 @@
 <%= form_for @sheet do |f| %>
 <%= render "shared/error_messages", :target => @sheet %>
 
-    <div class=""><%= f.text_field :name, :placeholder => 'Bracket Name...' %> for <%= current_user.fullname %> 	
+    <div class=""><%= f.text_field :name, :placeholder => 'Bracket Name...' %> for <%= @sheet.user.fullname %> 	
 </div>
   
   

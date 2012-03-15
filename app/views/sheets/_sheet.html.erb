@@ -1,14 +1,4 @@
-<br>
-<% @sheets.each do |sheet| %>
-
-<div class="">
-	<table width="100%"><tr>
-	<td><h3><%= sheet.name %> for <%= sheet.user.fullname %></h3> </td>
-	<% if sheet.total_points > 0 %>
-	<td><h4>(<%= sheet.total_points %> pts)</h4></td>
-	<% end %>
-	</tr></table>
-</div>
+<div class=""><h3><%= sheet.name %> for <%= current_user.fullname %></h3></div>
   
 <table summary="Tournament Bracket" class="mm">
  <tr>
@@ -125,7 +115,3 @@
   <td class="mm"><p class="mm"><%= sheet.round1g16b %></p></td>
  </tr>
 </table>
-
-<br><br>
-<% end %>
-

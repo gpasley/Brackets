@@ -9,6 +9,6 @@ class Sheet < ActiveRecord::Base
     :round2g3a, :round2g4a, :round2g5a, :round2g6a, :round2g7a, :round2g8a, :round2g1b, :round2g2b, :round2g3b, 
     :round2g4b, :round2g5b, :round2g6b, :round2g7b, :round2g8b, :round3g1a, :round3g2a, :round3g3a, :round3g4a,
     :round3g1b, :round3g2b, :round3g3b, :round3g4b, :round4g1, :round4g2, :round4g3, :round4g4, :round5g1, :round5g2,
-    :round6 
+    :round6, :unless => :is_master? 
     
 end

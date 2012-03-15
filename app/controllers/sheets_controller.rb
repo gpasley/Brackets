@@ -46,7 +46,7 @@ class SheetsController < ApplicationController
     @sheet.last_edit_by = current_user.id
     respond_to do |format|
       if @sheet.save
-        format.html { redirect_to(root_path, :notice => 'Your bracket was successfully created.') }
+        format.html { redirect_to(@sheet, :notice => 'Your bracket was successfully created.') }
       else
         format.html { render :action => "new" }
       end
@@ -58,7 +58,7 @@ class SheetsController < ApplicationController
     @sheet.last_edit_by = current_user.id
     respond_to do |format|
       if @sheet.update_attributes(params[:sheet])
-        format.html { redirect_to(root_path, :notice => 'Your bracket was successfully updated.') }
+        format.html { redirect_to(@sheet, :notice => 'Your bracket was successfully updated.') }
       else
         format.html { render :action => "edit" }
       end

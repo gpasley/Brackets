@@ -1,8 +1,10 @@
 
 
-    <div class=""><%= @sheet.name %> for <%= current_user.fullname %> 	
-</div>
-  
+<div class=""><h3><%= @sheet.name %> 
+	<% unless @sheet.is_master? %>
+	for <%= @sheet.user.fullname %>
+	<% end %>
+	</h3></div>
   
 <table summary="Tournament Bracket" class="mm">
  <tr>
