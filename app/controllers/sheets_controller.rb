@@ -32,6 +32,14 @@ class SheetsController < ApplicationController
     @sheets = Sheet.where("is_master = ?", false).order("total_points desc")
   end
   
+  def lock_sheets
+    @sheets = Sheet.where("is_master = ?", false)
+   # @sheets = Sheet.all
+    respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
+  
   def new
     @sheet = Sheet.new
 

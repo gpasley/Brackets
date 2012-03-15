@@ -11,7 +11,7 @@
    
 	<% if current_user.is_admin? %>
 	<%= link_to 'Master', sheet_path(@sheet), :class => "btn btn-info" %>
-<%= link_to 'Calculate', points_path, :class => "btn btn-success" %><br><br>
+<%= link_to 'Calculate', points_path, :class => "btn btn-success" %> <%= link_to 'Lock', lock_sheets_path, :class => "btn btn-danger" %><br><br>
 <% end %>
 <% end %>
 

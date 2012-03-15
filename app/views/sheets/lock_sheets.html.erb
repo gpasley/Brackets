@@ -1,0 +1,5 @@
+<% 
+@sheets.each do |sheet|
+	sheet.update_attribute(:is_locked, true)
+end %>
+Sheets now locked

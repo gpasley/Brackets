@@ -1,4 +1,5 @@
 <div class="">
+  Contact gpasley@gmail.com if you have any questions about your score
   <table id="leaders">
 	<th>Name</th>
 	<th>Bracket</th>
@@ -15,7 +16,7 @@
 	<% row_class = i%2 == 0 ? "even" : "odd" %>
 	<tr class="<%= row_class %>">
 	  <td><%= sheet.user.fullname %></td>
-	  <td><%= sheet.name %></td>
+	  <td><%= link_to sheet.name, sheet %></td>
 	  <td><%= sheet.round4g1 %>, <%= sheet.round4g2 %>, <%= sheet.round4g3 %>, <%= sheet.round4g4 %></td>
 	  <td><%= sheet.round6 %></td>
 	  <td><%= sheet.round1pts %></td>
