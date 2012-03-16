@@ -12,7 +12,7 @@ class SheetsController < ApplicationController
   
   def my_brackets
     @sheets = Sheet.where("user_id = ?", current_user).order("name")
-
+    @master = Sheet.where("is_master = ?", true).first
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sheets }
