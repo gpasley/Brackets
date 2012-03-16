@@ -6,123 +6,548 @@
 	<% end %>
 	</h3></div>
   
-<table summary="Tournament Bracket" class="mm">
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g1a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g1a %></p></td>
+	<table summary="Tournament Bracket" class="mm">
+	 <tr>
+		<% if @master.round1g1a > '' && @master.round1g1a != @sheet.round1g1a %>
+	  <td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %>
+		  <%= @sheet.round1g1a %>
+		</p>
+	  </td>
 
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g1a %></p></td>
+	  	<% if @master.round2g1a > '' && @master.round2g1a != @sheet.round2g1a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g1a %></p></td>
 
-  <td rowspan="8" class="mm"><p class="mm"><%= @sheet.round4g1 %></p></td>
+	  	<% if @master.round3g1a > '' && @master.round3g1a != @sheet.round3g1a %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g1a %></p></td>
 
-  <td rowspan="16" class="mm"><p class="mm"><%= @sheet.round5g1 %></p></td> 
+	  	<% if @master.round4g1 > '' && @master.round4g1 != @sheet.round4g1 %>
+	<td class="mm loss" rowspan="8">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="8">
+			<p class="mm">
+		  <% end %><%= @sheet.round4g1 %></p></td>
 
-  <td rowspan="8" class="mm"><p class="mm"><%= @sheet.round6 %></p></td>
+	  	<% if @master.round5g1 > '' && @master.round5g1 != @sheet.round5g1 %>
+	<td class="mm loss" rowspan="16">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="16">
+			<p class="mm">
+		  <% end %><%= @sheet.round5g1 %></p></td> 
 
-  <td rowspan="16" class="mm"><p class="mm"><%= @sheet.round5g2 %></p></td>
+	  	<% if @master.round6 > '' && @master.round6 != @sheet.round6 %>
+	<td class="mm loss" rowspan="8">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="8">
+			<p class="mm">
+		  <% end %><%= @sheet.round6 %></p></td>
 
-  <td rowspan="8" class="mm"><p class="mm"><%= @sheet.round4g3 %></p></td>
+	  	<% if @master.round5g2 > '' && @master.round5g2 != @sheet.round5g2 %>
+	<td class="mm loss" rowspan="16">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="16">
+			<p class="mm">
+		  <% end %><%= @sheet.round5g2 %></p></td>
 
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g1b %></p></td>
+	  	<% if @master.round4g3 > '' && @master.round4g3 != @sheet.round4g3 %>
+	<td class="mm loss" rowspan="8">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="8">
+			<p class="mm">
+		  <% end %><%= @sheet.round4g3 %></p></td>
 
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g1b %></p></td>
+	  	<% if @master.round3g1b > '' && @master.round3g1b != @sheet.round3g1b %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g1b %></p></td>
 
-  <td class="mm"><p class="mm"><%= @sheet.round1g1b %></p></td>
- </tr>
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g2a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g2b %></p></td>
- </tr>
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g3a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g2a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g2b %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g3b %></p></td>
- </tr>
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g4a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g4b %></p></td>
- </tr>
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g5a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g3a %></p></td>
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g2a %></p></td>
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g2b %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g3b %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g5b %></p></td>
- </tr>
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g6a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g6b %></p></td>
- </tr>
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g7a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g4a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g4b %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g7b %></p></td>
- </tr>
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g8a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g8b %></p></td>
- </tr>
+	  	<% if @master.round2g1b > '' && @master.round2g1b != @sheet.round2g1b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g1b %></p></td>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g9a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g5a %></p></td>
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g3a %></p></td>
-  <td rowspan="8" class="mm"><p class="mm"><%= @sheet.round4g2 %></p></td>
-  <td rowspan="32" align="center"><p class="mm">
-  	<% if ((@sheet.is_locked == false) && (@sheet.user == current_user)) || (current_user.is_admin?) %>
-      <%= link_to "Edit Bracket", edit_sheet_path(@sheet), :class => "btn btn-success" %>
-    <% end %>
-   
-  </p></td>
-  <td rowspan="8" class="mm"><p class="mm"><%= @sheet.round4g4 %></p></td>
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g3b %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g5b %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g9b %></p></td>
- </tr>
+	  	<% if @master.round1g1b > '' && @master.round1g1b != @sheet.round1g1b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g1b %></p></td>
+	 </tr>
+	 <tr>
+	  	<% if @master.round1g2a > '' && @master.round1g2a != @sheet.round1g2a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g2a %></p></td>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g10a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g10b %></p></td>
- </tr>
+	  	<% if @master.round1g2b > '' && @master.round1g2b != @sheet.round1g2b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g2b %></p></td>
+	 </tr>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g11a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g6a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g6b %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g11b %></p></td>
- </tr>
+	 <tr>
+	  	<% if @master.round1g3a > '' && @master.round1g3a != @sheet.round1g3a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g3a %></p></td>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g12a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g12b %></p></td>
- </tr>
+	  	<% if @master.round2g2a > '' && @master.round2g2a != @sheet.round2g2a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g2a %></p></td>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g13a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g7a %></p></td>
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g4a %></p></td>
-  <td rowspan="4" class="mm"><p class="mm"><%= @sheet.round3g4b %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g7b %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g13b %></p></td>
- </tr>
+		<% if @master.round2g2b > '' && @master.round2g2b != @sheet.round2g2b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g2b %></p></td>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g14a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g14b %></p></td>
- </tr>
+	  	<% if @master.round1g3b > '' && @master.round1g3b != @sheet.round1g3b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g3b %></p></td>
+	 </tr>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g15a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g8a %></p></td>
-  <td rowspan="2" class="mm"><p class="mm"><%= @sheet.round2g8b %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g15b %></p></td>
- </tr>
+	 <tr>
+	  	<% if @master.round1g4a > '' && @master.round1g4a != @sheet.round1g4a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g4a %></p></td>
 
- <tr>
-  <td class="mm"><p class="mm"><%= @sheet.round1g16a %></p></td>
-  <td class="mm"><p class="mm"><%= @sheet.round1g16b %></p></td>
- </tr>
-</table>
+	  	<% if @master.round1g4b > '' && @master.round1g4b != @sheet.round1g4b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g4b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g5a > '' && @master.round1g5a != @sheet.round1g5a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g5a %></p></td>
+
+	  	<% if @master.round2g3a > '' && @master.round2g3a != @sheet.round2g3a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g3a %></p></td>
+
+	  	<% if @master.round3g2a > '' && @master.round3g2a != @sheet.round3g2a %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g2a %></p></td>
+
+	  	<% if @master.round3g2b > '' && @master.round3g2b != @sheet.round3g2b %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g2b %></p></td>
+
+	  	<% if @master.round2g3b > '' && @master.round2g3b != @sheet.round2g3b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g3b %></p></td>
+
+	  	<% if @master.round1g5b > '' && @master.round1g5b != @sheet.round1g5b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g5b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g6a > '' && @master.round1g6a != @sheet.round1g6a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g6a %></p></td>
+
+	  	<% if @master.round1g6b > '' && @master.round1g6b != @sheet.round1g6b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g6b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g7a > '' && @master.round1g7a != @sheet.round1g7a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g7a %></p></td>
+
+	  	<% if @master.round2g4a > '' && @master.round2g4a != @sheet.round2g4a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g4a %></p></td>
+
+	  	<% if @master.round2g4b > '' && @master.round2g4b != @sheet.round2g4b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g4b %></p></td>
+
+	  	<% if @master.round1g7b > '' && @master.round1g7b != @sheet.round1g7b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g7b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g8a > '' && @master.round1g8a != @sheet.round1g8a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g8a %></p></td>
+
+	  	<% if @master.round1g8b > '' && @master.round1g8b != @sheet.round1g8b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g8b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g9a > '' && @master.round1g9a != @sheet.round1g9a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g9a %></p></td>
+
+	  	<% if @master.round2g5a > '' && @master.round2g5a != @sheet.round2g5a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g5a %></p></td>
+
+	  	<% if @master.round3g3a > '' && @master.round3g3a != @sheet.round3g3a %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g3a %></p></td>
+
+	  	<% if @master.round4g2 > '' && @master.round4g2 != @sheet.round4g2 %>
+	<td class="mm loss" rowspan="8">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="8">
+			<p class="mm">
+		  <% end %><%= @sheet.round4g2 %></p></td>
+
+	  <td rowspan="32" align="center"><p class="mm">
+	  	<% if ((@sheet.is_locked == false) && (@sheet.user == current_user)) || (current_user.is_admin?) %>
+	      <%= link_to "Edit Bracket", edit_sheet_path(@sheet), :class => "btn btn-success" %>
+	    <% end %>   
+	  </p></td>
+
+	  	<% if @master.round4g4 > '' && @master.round4g4 != @sheet.round4g4 %>
+	<td class="mm loss" rowspan="8">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="8">
+			<p class="mm">
+		  <% end %><%= @sheet.round4g4 %></p></td>
+
+	  	<% if @master.round3g3b > '' && @master.round3g3b != @sheet.round3g3b %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g3b %></p></td>
+
+	  	<% if @master.round2g5b > '' && @master.round2g5b != @sheet.round2g5b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g5b %></p></td>
+
+	  	<% if @master.round1g9b > '' && @master.round1g9b != @sheet.round1g9b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g9b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g10a > '' && @master.round1g10a != @sheet.round1g10a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g10a %></p></td>
+
+	  	<% if @master.round1g10b > '' && @master.round1g10b != @sheet.round1g10b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g10b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g11a > '' && @master.round1g11a != @sheet.round1g11a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g11a %></p></td>
+
+	  	<% if @master.round2g6a > '' && @master.round2g6a != @sheet.round2g6a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g6a %></p></td>
+
+	  	<% if @master.round2g6b > '' && @master.round2g6b != @sheet.round2g6b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g6b %></p></td>
+
+	  	<% if @master.round1g11b > '' && @master.round1g11b != @sheet.round1g11b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g11b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g12a > '' && @master.round1g12a != @sheet.round1g12a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g12a %></p></td>
+
+	  	<% if @master.round1g12b > '' && @master.round1g12b != @sheet.round1g12b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g12b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g13a > '' && @master.round1g13a != @sheet.round1g13a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g13a %></p></td>
+
+	  	<% if @master.round2g7a > '' && @master.round2g7a != @sheet.round2g7a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><p class="mm"><%= @sheet.round2g7a %></p></td>
+
+	  	<% if @master.round3g4a > '' && @master.round3g4a != @sheet.round3g4a %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g4a %></p></td>
+
+	  	<% if @master.round3g4b > '' && @master.round3g4b != @sheet.round3g4b %>
+	<td class="mm loss" rowspan="4">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="4">
+			<p class="mm">
+		  <% end %><%= @sheet.round3g4b %></p></td>
+
+	  	<% if @master.round2g7b > '' && @master.round2g7b != @sheet.round2g7b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g7b %></p></td>
+
+	  	<% if @master.round1g13b > '' && @master.round1g13b != @sheet.round1g13b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g13b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g14a > '' && @master.round1g14a != @sheet.round1g14a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g14a %></p></td>
+
+	  	<% if @master.round1g14b > '' && @master.round1g14b != @sheet.round1g14b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g14b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g15a > '' && @master.round1g15a != @sheet.round1g15a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g15a %></p></td>
+
+	  	<% if @master.round2g8a > '' && @master.round2g8a != @sheet.round2g8a %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g8a %></p></td>
+
+	  	<% if @master.round2g8b > '' && @master.round2g8b != @sheet.round2g8b %>
+	<td class="mm loss" rowspan="2">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm" rowspan="2">
+			<p class="mm">
+		  <% end %><%= @sheet.round2g8b %></p></td>
+
+	  	<% if @master.round1g15b > '' && @master.round1g15b != @sheet.round1g15b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g15b %></p></td>
+	 </tr>
+
+	 <tr>
+	  	<% if @master.round1g16a > '' && @master.round1g16a != @sheet.round1g16a %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g16a %></p></td>
+
+	  	<% if @master.round1g16b > '' && @master.round1g16b != @sheet.round1g16b %>
+	<td class="mm loss">
+		<p class="mm loss">
+		  <% else %>
+		  <td class="mm">
+			<p class="mm">
+		  <% end %><%= @sheet.round1g16b %></p></td>
+	 </tr>
+	</table>

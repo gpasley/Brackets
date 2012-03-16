@@ -79,7 +79,7 @@ class SheetsController < ApplicationController
   
   def show
     @sheet = Sheet.find(params[:id])
-
+    @master = Sheet.where("is_master = ?", true).first
     respond_to do |format|
       format.html # show.html.erb
     end
