@@ -145,3 +145,24 @@ img.bg {
 		margin-left: -512px;   /* 50% */
 	}
 }
+
+
+.home {
+	background: url('confetti2.jpg');
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+.login {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	*zoom: 1;  
+	background-color:rgba(20,10,10,0.5);
+	padding: 10px;
+	
+}
+
+a.login_lnk, a.login_lnk hover {
+	color: white;
+}

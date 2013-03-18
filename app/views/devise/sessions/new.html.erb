@@ -1,5 +1,11 @@
-<div class="container">
-<h2>Sign in to Brackets</h2>
+
+<% @page = 'front' %><br>
+<br>
+<br>
+<br>
+<br>
+<div class="login">
+<h2><font color="white">Sign in to Brackets <%= Time.now.strftime("%Y") %></font></h2>
 <br>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div>
@@ -8,12 +14,9 @@
   <div>
   <%= f.password_field :password, :placeholder => 'Password' %></div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+  
+  <div><%= f.submit "Sign in", :class => 'btn' %> <font color="white">or</font> <%= link_to "Register", new_registration_path(resource_name), :class => 'btn btn-success' %></div>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+<%= link_to "Forgot your password?", new_password_path(resource_name), :class => 'login_lnk' %><br />
 </div>
