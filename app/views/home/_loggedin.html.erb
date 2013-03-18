@@ -14,8 +14,10 @@
   <% end %>
 	<% if current_user.is_admin? %>
 	
-<%= link_to 'Calculate', points_path, :class => "btn btn-success" %> <%= link_to 'Lock', lock_sheets_path, :class => "btn btn-danger" %><br><br><%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %><br>
+<%= link_to 'Calculate', points_path, :class => "btn btn-success" %> <%= link_to 'Lock', lock_sheets_path, :class => "btn btn-danger" %><br><br>
 <% end %>
+<%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %><br>
+
 <% end %>
 
 
