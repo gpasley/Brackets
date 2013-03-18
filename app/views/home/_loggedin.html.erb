@@ -7,13 +7,17 @@
 
 
 <br><br>
+
 <% if user_signed_in? %>
+  <% unless @sheet.nil? %>
    <%= link_to 'View Master Sheet', sheet_path(@sheet), :class => "btn btn-info" %><br><br>
+  <% end %>
 	<% if current_user.is_admin? %>
 	
 <%= link_to 'Calculate', points_path, :class => "btn btn-success" %> <%= link_to 'Lock', lock_sheets_path, :class => "btn btn-danger" %><br><br><%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %><br>
 <% end %>
 <% end %>
+
 
 <div class="row">
         <div class="span3">
@@ -25,10 +29,10 @@
 		   <p>Round 5 - 16pts </p>
 		   <p>Round 6 - 32pts </p>
 		   <p>*Points per win</p><br>
-		   <p>1st - $145</p>
+<!--		   <p>1st - $145</p>  
 		   <p>2nd - $60</p>
 		   <p>3rd - $20</p>
-          
+-->          
         </div>
         <div class="span4">
           <h2>Champion Pick</h2>
