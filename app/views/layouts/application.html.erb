@@ -5,6 +5,12 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+      $().ready(function(){
+        $('input[placeholder]').simplePlaceholder();
+        $('textarea[placeholder]').simplePlaceholder();
+      })
+    </script>
 </head>
 <% if user_signed_in? %>
 <body>
