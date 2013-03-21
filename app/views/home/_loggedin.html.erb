@@ -3,11 +3,9 @@
 	<div class="hero-unit">
 	        <div class="mytitle">March Madness Brackets <%= Time.now.strftime("%Y") %></div>
 	      </div>
+
 <br>
-
-
-<br><br>
-
+<p><font color="red">Please review your bracket and contact gpasley@gmail.com for any corrections.  Otherwise, the higher seed will always be picked for the correction.</font></p>
 <% if user_signed_in? %>
   <% unless @sheet.nil? %>
    <%= link_to 'View Master Sheet', sheet_path(@sheet), :class => "btn btn-info" %><br><br>
@@ -21,6 +19,7 @@
 <% end %>
 
 
+
 <div class="row">
         <div class="span3">
           <h2>Scoring</h2>
@@ -31,10 +30,12 @@
 		   <p>Round 5 - 16pts </p>
 		   <p>Round 6 - 32pts </p>
 		   <p>*Points per win</p><br>
-<!--		   <p>1st - $145</p>  
-		   <p>2nd - $60</p>
+		   <p>1st - $220</p>  
+		   <p>2nd - $80</p>
 		   <p>3rd - $20</p>
--->          
+		   <p>Last - $5</p>
+		   
+          
         </div>
         <div class="span4">
           <h2>Champion Pick</h2>
