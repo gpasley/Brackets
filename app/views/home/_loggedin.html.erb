@@ -14,7 +14,9 @@
 	
 <%= link_to 'Calculate', points_path, :class => "btn btn-success" %> <%= link_to 'Lock', lock_sheets_path, :class => "btn btn-danger" %><br><br>
 <% end %>
-<%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %><br>
+<% if @locked.nil?  %>
+  <%= link_to 'Add Bracket', new_sheet_path, :class => "btn success" %><br>
+<% end %>
 
 <% end %>
 
