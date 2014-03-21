@@ -14,7 +14,7 @@
 			   <li><%= link_to 'My Brackets', my_brackets_path %></li> 
 				<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
 				<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-				<li><%= link_to 'Howdy, ' + current_user.first_name + ' (' + current_user.email + ')', my_brackets_path %></li>
+				<li><%= link_to 'Howdy, ' + current_user.first_name + ' (' + current_user.email + ')', edit_user_registration_path(current_user) %></li>
 				<% if current_user.is_admin? %>
 				  <li><%= link_to "Teams", teams_path %></li>
 				  <li><%= link_to "Admin", rails_admin_path, :target => '_blank' %></li>
