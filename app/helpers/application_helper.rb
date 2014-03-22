@@ -6,52 +6,52 @@ module ApplicationHelper
     iR4 = 0
     iR5 = 0
     iR6 = 0
-    if sheet.round1g1a == master.round1g1a
+    if sheet.round1g1ad == master.round1g1ad
       iR1 += 1
     end if
-   if sheet.round1g2a == master.round1g2a
+   if sheet.round1g2ad == master.round1g2ad
        iR1 += 1
      end if
-     if sheet.round1g3a == master.round1g3a
+     if sheet.round1g3ad == master.round1g3ad
        iR1 += 1
      end if
-     if sheet.round1g4a == master.round1g4a
+     if sheet.round1g4ad == master.round1g4ad
        iR1 += 1
      end if
-     if sheet.round1g5a == master.round1g5a
+     if sheet.round1g5ad == master.round1g5ad
        iR1 += 1
      end if
-     if sheet.round1g6a == master.round1g6a
+     if sheet.round1g6ad == master.round1g6ad
        iR1 += 1
      end if
-     if sheet.round1g7a == master.round1g7a
+     if sheet.round1g7ad == master.round1g7ad
        iR1 += 1
      end if
-     if sheet.round1g8a == master.round1g8a
+     if sheet.round1g8ad == master.round1g8ad
        iR1 += 1
      end if
-     if sheet.round1g9a == master.round1g9a
+     if sheet.round1g9ad == master.round1g9ad
        iR1 += 1
      end if
-     if sheet.round1g10a == master.round1g10a
+     if sheet.round1g10ad == master.round1g10ad
        iR1 += 1
      end if
-     if sheet.round1g11a == master.round1g11a
+     if sheet.round1g11ad == master.round1g11ad
        iR1 += 1
      end if
-     if sheet.round1g12a == master.round1g12a
+     if sheet.round1g12ad == master.round1g12ad
        iR1 += 1
      end if
-     if sheet.round1g13a == master.round1g13a
+     if sheet.round1g13ad == master.round1g13ad
        iR1 += 1
      end if
-     if sheet.round1g14a == master.round1g14a
+     if sheet.round1g14ad == master.round1g14ad
        iR1 += 1
      end if
-     if sheet.round1g15a == master.round1g15a
+     if sheet.round1g15ad == master.round1g15ad
        iR1 += 1
      end if
-     if sheet.round1g16a == master.round1g16a
+     if sheet.round1g16ad == master.round1g16ad
        iR1 += 1
      end if 
     sheet.round1pts = iR1
@@ -62,5 +62,14 @@ module ApplicationHelper
     sheet.round6pts = iR6
     sheet.total_points = iR1 + iR2 + iR3 + iR4 + iR5 + iR6
     sheet.save 
+  end
+  
+  def team_loss(team)
+    team = Team.where("name=? and loss_yn=?", team, true)
+    if team.size > 0
+      return true
+    else
+      return false
+    end
   end
 end

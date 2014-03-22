@@ -19,7 +19,7 @@
 		</p>
 	  </td>
 
-	  	<% if @master.round2g1a > '' && @master.round2g1a != @sheet.round2g1a %>
+	  	<% if (@master.round2g1a > '' && @master.round2g1a != @sheet.round2g1a) || (team_loss(@sheet.round2g1a)==true && @master.round2g1a != @sheet.round2g1a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -27,7 +27,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g1a %></p></td>
 
-	  	<% if @master.round3g1a > '' && @master.round3g1a != @sheet.round3g1a %>
+	  	<% if (@master.round3g1a > '' && @master.round3g1a != @sheet.round3g1a) || (team_loss(@sheet.round3g1a)==true && @master.round3g1a != @sheet.round3g1a) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -35,7 +35,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g1a %></p></td>
 
-	  	<% if @master.round4g1 > '' && @master.round4g1 != @sheet.round4g1 %>
+	  	<% if (@master.round4g1 > '' && @master.round4g1 != @sheet.round4g1) || (team_loss(@sheet.round4g1)==true && @master.round4g1 != @sheet.round4g1) %>
 	<td class="mm loss" rowspan="8">
 		<p class="mm loss">
 		  <% else %>
@@ -43,7 +43,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round4g1 %></p></td>
 
-	  	<% if @master.round5g1 > '' && @master.round5g1 != @sheet.round5g1 %>
+	  	<% if (@master.round5g1 > '' && @master.round5g1 != @sheet.round5g1) || (team_loss(@sheet.round5g1)==true && @master.round5g1 != @sheet.round5g1) %>
 	<td class="mm loss" rowspan="16">
 		<p class="mm loss">
 		  <% else %>
@@ -51,7 +51,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round5g1 %></p></td> 
 
-	  	<% if @master.round6 > '' && @master.round6 != @sheet.round6 %>
+	  	<% if (@master.round6 > '' && @master.round6 != @sheet.round6) || (team_loss(@sheet.round6)==true && @master.round6 != @sheet.round6) %>
 	<td class="mm loss" rowspan="8">
 		<p class="mm loss">
 		  <% else %>
@@ -59,7 +59,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round6 %></p></td>
 
-	  	<% if @master.round5g2 > '' && @master.round5g2 != @sheet.round5g2 %>
+	  	<% if (@master.round5g2 > '' && @master.round5g2 != @sheet.round5g2) || (team_loss(@sheet.round5g2)==true && @master.round5g2 != @sheet.round5g2) %>
 	<td class="mm loss" rowspan="16">
 		<p class="mm loss">
 		  <% else %>
@@ -67,7 +67,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round5g2 %></p></td>
 
-	  	<% if @master.round4g3 > '' && @master.round4g3 != @sheet.round4g3 %>
+	  	<% if (@master.round4g3 > '' && @master.round4g3 != @sheet.round4g3) || (team_loss(@sheet.round4g3)==true && @master.round4g3 != @sheet.round4g3) %>
 	<td class="mm loss" rowspan="8">
 		<p class="mm loss">
 		  <% else %>
@@ -75,7 +75,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round4g3 %></p></td>
 
-	  	<% if @master.round3g1b > '' && @master.round3g1b != @sheet.round3g1b %>
+	  	<% if (@master.round3g1b > '' && @master.round3g1b != @sheet.round3g1b) || (team_loss(@sheet.round3g1b)==true && @master.round3g1b != @sheet.round3g1b) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -83,7 +83,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g1b %></p></td>
 
-	  	<% if @master.round2g1b > '' && @master.round2g1b != @sheet.round2g1b %>
+	  	<% if (@master.round2g1b > '' && @master.round2g1b != @sheet.round2g1b) || (team_loss(@sheet.round2g1b)==true && @master.round2g1b != @sheet.round2g1b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -126,7 +126,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round1g3a %></p></td>
 
-	  	<% if @master.round2g2a > '' && @master.round2g2a != @sheet.round2g2a %>
+	  	<% if (@master.round2g2a > '' && @master.round2g2a != @sheet.round2g2a) || (team_loss(@sheet.round2g2a)==true && @master.round2g2a != @sheet.round2g2a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -134,7 +134,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g2a %></p></td>
 
-		<% if @master.round2g2b > '' && @master.round2g2b != @sheet.round2g2b %>
+		<% if (@master.round2g2b > '' && @master.round2g2b != @sheet.round2g2b) || (team_loss(@sheet.round2g2b)==true && @master.round2g2b != @sheet.round2g2b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -178,7 +178,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round1g5a %></p></td>
 
-	  	<% if @master.round2g3a > '' && @master.round2g3a != @sheet.round2g3a %>
+	  	<% if (@master.round2g3a > '' && @master.round2g3a != @sheet.round2g3a) || (team_loss(@sheet.round2g3a)==true && @master.round2g3a != @sheet.round2g3a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -186,7 +186,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g3a %></p></td>
 
-	  	<% if @master.round3g2a > '' && @master.round3g2a != @sheet.round3g2a %>
+	  	<% if (@master.round3g2a > '' && @master.round3g2a != @sheet.round3g2a) || (team_loss(@sheet.round3g2a)==true && @master.round3g2a != @sheet.round3g2a) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -194,7 +194,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g2a %></p></td>
 
-	  	<% if @master.round3g2b > '' && @master.round3g2b != @sheet.round3g2b %>
+	  	<% if (@master.round3g2b > '' && @master.round3g2b != @sheet.round3g2b) || (team_loss(@sheet.round3g2b)==true && @master.round3g2b != @sheet.round3g2b) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -202,7 +202,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g2b %></p></td>
 
-	  	<% if @master.round2g3b > '' && @master.round2g3b != @sheet.round2g3b %>
+	  	<% if (@master.round2g3b > '' && @master.round2g3b != @sheet.round2g3b) || (team_loss(@sheet.round2g3b)==true && @master.round2g3b != @sheet.round2g3b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -246,7 +246,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round1g7a %></p></td>
 
-	  	<% if @master.round2g4a > '' && @master.round2g4a != @sheet.round2g4a %>
+	  	<% if (@master.round2g4a > '' && @master.round2g4a != @sheet.round2g4a) || (team_loss(@sheet.round2g4a)==true && @master.round2g4a != @sheet.round2g4a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -254,7 +254,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g4a %></p></td>
 
-	  	<% if @master.round2g4b > '' && @master.round2g4b != @sheet.round2g4b %>
+	  	<% if (@master.round2g4b > '' && @master.round2g4b != @sheet.round2g4b) || (team_loss(@sheet.round2g4b)==true && @master.round2g4b != @sheet.round2g4b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -298,7 +298,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round1g9a %></p></td>
 
-	  	<% if @master.round2g5a > '' && @master.round2g5a != @sheet.round2g5a %>
+	  	<% if (@master.round2g5a > '' && @master.round2g5a != @sheet.round2g5a) || (team_loss(@sheet.round2g5a)==true && @master.round2g5a != @sheet.round2g5a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -306,7 +306,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g5a %></p></td>
 
-	  	<% if @master.round3g3a > '' && @master.round3g3a != @sheet.round3g3a %>
+	  	<% if (@master.round3g3a > '' && @master.round3g3a != @sheet.round3g3a) || (team_loss(@sheet.round3g3a)==true && @master.round3g3a != @sheet.round3g3a) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -314,7 +314,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g3a %></p></td>
 
-	  	<% if @master.round4g2 > '' && @master.round4g2 != @sheet.round4g2 %>
+	  	<% if (@master.round4g2 > '' && @master.round4g2 != @sheet.round4g2) || (team_loss(@sheet.round4g2)==true && @master.round4g2 != @sheet.round4g2) %>
 	<td class="mm loss" rowspan="8">
 		<p class="mm loss">
 		  <% else %>
@@ -328,7 +328,7 @@
 	    <% end %>   
 	  </p></td>
 
-	  	<% if @master.round4g4 > '' && @master.round4g4 != @sheet.round4g4 %>
+	  	<% if (@master.round4g4 > '' && @master.round4g4 != @sheet.round4g4) || (team_loss(@sheet.round4g4)==true && @master.round4g4 != @sheet.round4g4) %>
 	<td class="mm loss" rowspan="8">
 		<p class="mm loss">
 		  <% else %>
@@ -336,7 +336,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round4g4 %></p></td>
 
-	  	<% if @master.round3g3b > '' && @master.round3g3b != @sheet.round3g3b %>
+	  	<% if (@master.round3g3b > '' && @master.round3g3b != @sheet.round3g3b) || (team_loss(@sheet.round3g3b)==true && @master.round3g3b != @sheet.round3g3b) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -344,7 +344,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g3b %></p></td>
 
-	  	<% if @master.round2g5b > '' && @master.round2g5b != @sheet.round2g5b %>
+	  	<% if (@master.round2g5b > '' && @master.round2g5b != @sheet.round2g5b) || (team_loss(@sheet.round2g5b)==true && @master.round2g5b != @sheet.round2g5b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -388,7 +388,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round1g11a %></p></td>
 
-	  	<% if @master.round2g6a > '' && @master.round2g6a != @sheet.round2g6a %>
+	  	<% if (@master.round2g6a > '' && @master.round2g6a != @sheet.round2g6a) || (team_loss(@sheet.round2g6a)==true && @master.round2g6a != @sheet.round2g6a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -396,7 +396,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g6a %></p></td>
 
-	  	<% if @master.round2g6b > '' && @master.round2g6b != @sheet.round2g6b %>
+	  	<% if (@master.round2g6b > '' && @master.round2g6b != @sheet.round2g6b) || (team_loss(@sheet.round2g6b)==true && @master.round2g6b != @sheet.round2g6b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -440,7 +440,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round1g13a %></p></td>
 
-	  	<% if @master.round2g7a > '' && @master.round2g7a != @sheet.round2g7a %>
+	  	<% if (@master.round2g7a > '' && @master.round2g7a != @sheet.round2g7a) || (team_loss(@sheet.round2g7a)==true && @master.round2g7a != @sheet.round2g7a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -448,7 +448,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g7a %></p></td>
 
-	  	<% if @master.round3g4a > '' && @master.round3g4a != @sheet.round3g4a %>
+	  	<% if (@master.round3g4a > '' && @master.round3g4a != @sheet.round3g4a) || (team_loss(@sheet.round3g4a)==true && @master.round3g4a != @sheet.round3g4a) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -456,7 +456,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g4a %></p></td>
 
-	  	<% if @master.round3g4b > '' && @master.round3g4b != @sheet.round3g4b %>
+	  	<% if (@master.round3g4b > '' && @master.round3g4b != @sheet.round3g4b) || (team_loss(@sheet.round3g4b)==true && @master.round3g4b != @sheet.round3g4b) %>
 	<td class="mm loss" rowspan="4">
 		<p class="mm loss">
 		  <% else %>
@@ -464,7 +464,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round3g4b %></p></td>
 
-	  	<% if @master.round2g7b > '' && @master.round2g7b != @sheet.round2g7b %>
+	  	<% if (@master.round2g7b > '' && @master.round2g7b != @sheet.round2g7b) || (team_loss(@sheet.round2g7b)==true && @master.round2g7b != @sheet.round2g7b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -508,7 +508,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round1g15a %></p></td>
 
-	  	<% if @master.round2g8a > '' && @master.round2g8a != @sheet.round2g8a %>
+	  	<% if (@master.round2g8a > '' && @master.round2g8a != @sheet.round2g8a) || (team_loss(@sheet.round2g8a)==true && @master.round2g8a != @sheet.round2g8a) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>
@@ -516,7 +516,7 @@
 			<p class="mm">
 		  <% end %><%= @sheet.round2g8a %></p></td>
 
-	  	<% if @master.round2g8b > '' && @master.round2g8b != @sheet.round2g8b %>
+	  	<% if (@master.round2g8b > '' && @master.round2g8b != @sheet.round2g8b) || (team_loss(@sheet.round2g8b)==true && @master.round2g8b != @sheet.round2g8b) %>
 	<td class="mm loss" rowspan="2">
 		<p class="mm loss">
 		  <% else %>

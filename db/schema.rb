@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315131339) do
+ActiveRecord::Schema.define(:version => 20140322015346) do
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -105,6 +105,69 @@ ActiveRecord::Schema.define(:version => 20120315131339) do
     t.integer  "last_edit_by", :default => 0
     t.boolean  "is_master",    :default => false
     t.boolean  "is_locked",    :default => false
+    t.integer  "round1g1ad",   :default => 0
+    t.integer  "round1g2ad",   :default => 0
+    t.integer  "round1g3ad",   :default => 0
+    t.integer  "round1g4ad",   :default => 0
+    t.integer  "round1g5ad",   :default => 0
+    t.integer  "round1g6ad",   :default => 0
+    t.integer  "round1g7ad",   :default => 0
+    t.integer  "round1g8ad",   :default => 0
+    t.integer  "round1g9ad",   :default => 0
+    t.integer  "round1g10ad",  :default => 0
+    t.integer  "round1g11ad",  :default => 0
+    t.integer  "round1g12ad",  :default => 0
+    t.integer  "round1g13ad",  :default => 0
+    t.integer  "round1g14ad",  :default => 0
+    t.integer  "round1g15ad",  :default => 0
+    t.integer  "round1g16ad",  :default => 0
+    t.integer  "round1g1bd",   :default => 0
+    t.integer  "round1g2bd",   :default => 0
+    t.integer  "round1g3bd",   :default => 0
+    t.integer  "round1g4bd",   :default => 0
+    t.integer  "round1g5bd",   :default => 0
+    t.integer  "round1g6bd",   :default => 0
+    t.integer  "round1g7bd",   :default => 0
+    t.integer  "round1g8bd",   :default => 0
+    t.integer  "round1g9bd",   :default => 0
+    t.integer  "round1g10bd",  :default => 0
+    t.integer  "round1g11bd",  :default => 0
+    t.integer  "round1g12bd",  :default => 0
+    t.integer  "round1g13bd",  :default => 0
+    t.integer  "round1g14bd",  :default => 0
+    t.integer  "round1g15bd",  :default => 0
+    t.integer  "round1g16bd",  :default => 0
+    t.integer  "round2g1ad",   :default => 0
+    t.integer  "round2g2ad",   :default => 0
+    t.integer  "round2g3ad",   :default => 0
+    t.integer  "round2g4ad",   :default => 0
+    t.integer  "round2g5ad",   :default => 0
+    t.integer  "round2g6ad",   :default => 0
+    t.integer  "round2g7ad",   :default => 0
+    t.integer  "round2g8ad",   :default => 0
+    t.integer  "round2g1bd",   :default => 0
+    t.integer  "round2g2bd",   :default => 0
+    t.integer  "round2g3bd",   :default => 0
+    t.integer  "round2g4bd",   :default => 0
+    t.integer  "round2g5bd",   :default => 0
+    t.integer  "round2g6bd",   :default => 0
+    t.integer  "round2g7bd",   :default => 0
+    t.integer  "round2g8bd",   :default => 0
+    t.integer  "round3g1ad",   :default => 0
+    t.integer  "round3g2ad",   :default => 0
+    t.integer  "round3g3ad",   :default => 0
+    t.integer  "round3g4ad",   :default => 0
+    t.integer  "round3g1bd",   :default => 0
+    t.integer  "round3g2bd",   :default => 0
+    t.integer  "round3g3bd",   :default => 0
+    t.integer  "round3g4bd",   :default => 0
+    t.integer  "round4g1d",    :default => 0
+    t.integer  "round4g2d",    :default => 0
+    t.integer  "round4g3d",    :default => 0
+    t.integer  "round4g4d",    :default => 0
+    t.integer  "round5g1d",    :default => 0
+    t.integer  "round5g2d",    :default => 0
+    t.integer  "round6d",      :default => 0
   end
 
   create_table "teams", :force => true do |t|
@@ -114,6 +177,7 @@ ActiveRecord::Schema.define(:version => 20120315131339) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "game"
+    t.boolean  "loss_yn",      :default => false
   end
 
   create_table "users", :force => true do |t|
