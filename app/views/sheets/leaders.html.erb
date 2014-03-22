@@ -19,16 +19,16 @@
 	  <td><%= link_to sheet.name, sheet %></td>
 	  <td>	
 		<span class="<%= 'loss' if team_loss(sheet.round4g1) == true %>">
-	      <%= sheet.round4g1 %>
-	    </span>, 
+	      <%= sheet.round4g1 %>,
+	    </span> 
 	    <span class="<%= 'loss' if team_loss(sheet.round4g2) == true %>">
-	     <%= sheet.round4g2 %>
-	    </span>,
+	      &nbsp;<%= sheet.round4g2 %>,
+	    </span>
 	    <span class="<%= 'loss' if team_loss(sheet.round4g3) == true %>">
-	     <%= sheet.round4g3 %>
-	    </span>,
+	      &nbsp;<%= sheet.round4g3 %>, 
+	    </span>
 		<span class="<%= 'loss' if team_loss(sheet.round4g4) == true %>">
-	     <%= sheet.round4g4 %>
+	      &nbsp;<%= sheet.round4g4 %>
 	    </span>
 	  </td>
 	  <td>
