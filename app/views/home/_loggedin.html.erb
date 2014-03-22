@@ -43,7 +43,13 @@
           <h2>Champion Pick</h2>
 		  <table width="50%">
            <% @picks.each do |pick| %>
-           <tr><td><%= pick[0] %></td><td align="right"><%= pick[1] %></td></tr>
+           <tr>
+	         <% if team_loss(pick[0])==true%>
+	           <td class="mm loss"><%= pick[0] %></td><td align="right" class="mm loss"><%= pick[1] %></td>
+			 <% else %>
+	           <td><%= pick[0] %></td><td align="right"><%= pick[1] %></td>
+	         <% end %>
+	       </tr>
 		   <% end %>
 		  </table>
        </div>

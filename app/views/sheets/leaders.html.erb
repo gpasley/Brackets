@@ -17,8 +17,26 @@
 	<tr class="<%= row_class %>">
 	  <td><%= sheet.user.fullname %></td>
 	  <td><%= link_to sheet.name, sheet %></td>
-	  <td><%= sheet.round4g1 %>, <%= sheet.round4g2 %>, <%= sheet.round4g3 %>, <%= sheet.round4g4 %></td>
-	  <td><%= sheet.round6 %></td>
+	  <td>	
+		<span class="<%= 'loss' if team_loss(sheet.round4g1) == true %>">
+	      <%= sheet.round4g1 %>
+	    </span>, 
+	    <span class="<%= 'loss' if team_loss(sheet.round4g2) == true %>">
+	     <%= sheet.round4g2 %>
+	    </span>,
+	    <span class="<%= 'loss' if team_loss(sheet.round4g3) == true %>">
+	     <%= sheet.round4g3 %>
+	    </span>,
+		<span class="<%= 'loss' if team_loss(sheet.round4g4) == true %>">
+	     <%= sheet.round4g4 %>
+	    </span>
+	  </td>
+	  <td>
+	   	<span class="<%= 'loss' if team_loss(sheet.round6) == true %>">
+	     <%= sheet.round6 %>
+	    </span>
+
+	  </td>
 	  <td><%= sheet.round1pts %></td>
 	  <td><%= sheet.round2pts %></td>
 	  <td><%= sheet.round3pts %></td>
