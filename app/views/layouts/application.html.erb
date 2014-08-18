@@ -2,15 +2,10 @@
 <html>
 <head>
   <title>Brackets</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application", debug: true %>
+  <%= javascript_include_tag "application", debug: true %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript">
-      $().ready(function(){
-        $('input[placeholder]').simplePlaceholder();
-        $('textarea[placeholder]').simplePlaceholder();
-      })
-    </script>
+  
 </head>
 <% if user_signed_in? %>
 <body>
@@ -22,9 +17,12 @@
 
 	    </div>
 	<div id="zuma-main">
-		<% flash.each do |name, msg| %>
-	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	      <% end %>
+		<% flash.each do |key, value| %>
+	      <div class="<%= flash_class(key) %>">
+		    <button type="button" class="close" data-dismiss="alert">&times;</button>
+		      <%= value %>
+		  </div>
+	    <% end %>
 <%= yield %>
      </div>
 

@@ -1,4 +1,7 @@
 class SheetsController < ApplicationController
+  
+  include Points
+  
   before_filter :authenticate_user!
   
   def index
@@ -22,9 +25,12 @@ class SheetsController < ApplicationController
   def get_points
     @master = Sheet.where("is_master = ?", true).first
     @sheets = Sheet.where("is_master = ?", false)
-   # @sheets = Sheet.all
+    @sheets.each do |sheet|
+    	calculate(sheet, @master)
+    end
+    flash[:success] = "Points have been calculated"
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { redirect_to leaders_path }
     end
   end
   
@@ -34,9 +40,12 @@ class SheetsController < ApplicationController
   
   def lock_sheets
     @sheets = Sheet.where("is_master = ?", false)
-   # @sheets = Sheet.all
+    @sheets.each do |sheet|
+    	sheet.update_attribute(:is_locked, true)
+    end
+    flash[:success] = "Brackets are now locked"
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { redirect_to root_path }
     end
   end
   
@@ -84,4 +93,5 @@ class SheetsController < ApplicationController
       format.html # show.html.erb
     end
   end
+    
 end

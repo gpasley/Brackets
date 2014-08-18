@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -14,9 +14,11 @@ group :assets do
   gem 'sass-rails', "  ~> 3.2.4"
   gem 'coffee-rails', "~> 3.2.2"
   gem 'uglifier'
+  gem 'bootstrap-sass', '~> 2.3.0.0'
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
